@@ -7,5 +7,30 @@
   <ul>
     <li><a href="/tasks">Tasks</a></li>
     <li><a href="/health">Health</a></li>
+    <li>
+      <form action="/tasks" method="get" class="font-size-switcher" aria-label="Font size">
+        <label for="font-size">Font size</label>
+        <select id="font-size" name="font">
+          <option value="normal" {% if fontSize == "normal" %}selected{% endif %}>Normal</option>
+          <option value="large" {% if fontSize == "large" %}selected{% endif %}>Large</option>
+        </select>
+        <button type="submit">Apply</button>
+      </form>
+    </li>
+    <li>
+      <label for="bg-mode" class="stacked-label">Background</label>
+      <select id="bg-mode" name="bg-mode">
+        <option value="default">Default</option>
+        <option value="light">Light</option>
+        <option value="contrast">High contrast</option>
+      </select>
+    </li>
+    <li>
+      <label for="sound-toggle" class="stacked-label">Sound</label>
+      <select id="sound-toggle">
+        <option value="on">On</option>
+        <option value="off">Off</option>
+      </select>
+    </li>
   </ul>
 </nav>

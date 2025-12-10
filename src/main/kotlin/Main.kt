@@ -134,6 +134,7 @@ suspend fun ApplicationCall.renderTemplate(
         context +
             mapOf(
                 "sessionId" to (sessionData?.id ?: "anonymous"),
+                "fontSize" to (request.queryParameters["font"]?.takeIf { it == "large" } ?: "normal"),
                 "isHtmx" to isHtmxRequest(),
             )
 
